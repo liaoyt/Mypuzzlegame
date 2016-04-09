@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="510px"
+            android:layout_height="510px"
+            android:src="@drawable/bgs" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="510px"
+            android:layout_height="510px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/time"
+            android:drawableLeft="@drawable/clock"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div"
+        id="@string/id_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div2"
+        id="@string/id_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div3"
+        id="@string/id_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div4"
+        id="@string/id_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div5"
+        id="@string/id_5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div6"
+        id="@string/id_6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div7"
+        id="@string/id_7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div8"
+        id="@string/id_8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div9"
+        id="@string/id_9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div10"
+        id="@string/id_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div11"
+        id="@string/id_11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div12"
+        id="@string/id_12"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div13"
+        id="@string/id_13"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div14"
+        id="@string/id_14"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div15"
+        id="@string/id_15"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div16"
+        id="@string/id_16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div17"
+        id="@string/id_17"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div18"
+        id="@string/id_18"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div19"
+        id="@string/id_19"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div20"
+        id="@string/id_20"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div21"
+        id="@string/id_21"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div22"
+        id="@string/id_22"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div23"
+        id="@string/id_23"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div24"
+        id="@string/id_24"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.dell_pc.test.DragImageView
+        android:id="@+id/div25"
+        id="@string/id_25"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>
