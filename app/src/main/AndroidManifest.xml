@@ -39,6 +39,10 @@
         <activity
             android:name=".PuzzleActivity"
             android:label="testpuzzle" />
+
+        <activity
+            android:name=".Ranking"
+            android:label="Rank" />
         <!--
             <activity android:name=".Login"
             android:label="Login"/>

@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
             public  void onClick(View v)
             {
                 //跳至排行榜！
-                //Intent intent = new Intent();
-                //intent.setClass(MainActivity.this, Register.class);
-                //startActivity(intent);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, Ranking.class);
+                startActivity(intent);
             }
         });
 

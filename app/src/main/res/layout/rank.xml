@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第一名"
+        android:id="@+id/rankFirst"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户排名"
+        android:id="@+id/uerRank"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第二名"
+        android:id="@+id/rankSecond"
+        android:layout_below="@+id/rankFirst"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第三名"
+        android:id="@+id/rankThird"
+        android:layout_below="@+id/rankSecond"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
+</RelativeLayout>
