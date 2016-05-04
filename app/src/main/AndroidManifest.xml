@@ -3,6 +3,7 @@
     package="com.example.dell_pc.test">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <supports-screens
         android:anyDensity="true"
@@ -43,13 +44,14 @@
             android:name=".SelectPictureActivity"
             android:label="selectpic"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".PuzzleActivity"
-            android:label="testpuzzle" />
 
         <activity
             android:name=".Ranking"
             android:label="Rank" />
+        <activity
+            android:name=".PuzzleActivity"
+            android:label="Puzzle"
+            android:screenOrientation="portrait"/>
         <!--
             <activity android:name=".Login"
             android:label="Login"/>

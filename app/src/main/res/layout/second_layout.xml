@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/bg"
+        />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:layout_width="510px"
+            android:layout_height="510px"
+            android:id="@+id/imageBlock"
+            android:src="@drawable/block"
+            />
+    </RelativeLayout>
+    <com.example.dell_pc.test.View.MySurfaceView
+        android:id="@+id/puzzles"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </com.example.dell_pc.test.View.MySurfaceView>
+</FrameLayout>
