@@ -2,6 +2,7 @@ package com.example.dell_pc.test;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PixelFormat;
@@ -12,6 +13,8 @@ import android.widget.RelativeLayout;
 import com.example.dell_pc.test.View.MySurfaceView;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by Administrator on 2016-4-13.
@@ -44,10 +47,14 @@ public class PuzzleActivity extends Activity {
         v.getHolder().setFormat(PixelFormat.TRANSLUCENT);
 
         if(mode==0){
-            int bmpId=intent.getIntExtra("bitmap", R.drawable.archer);
-            Bitmap bmp= BitmapFactory.decodeResource(getResources(),bmpId);
+            String bmpDir=intent.getStringExtra("bitmap");
+            Bitmap bmp= getImageFromAssetsFile(bmpDir);
             bmp=Bitmap.createScaledBitmap(bmp,length,length,true);
             v.ini(pieceNum,length,bmp,offX,offY);
+
+            /*Bitmap bmp= BitmapFactory.decodeResource(getResources(),bmpId);
+            bmp=Bitmap.createScaledBitmap(bmp,length,length,true);
+            v.ini(pieceNum,length,bmp,offX,offY);*/
         }
         else if(mode==1){
             Uri imageUri=intent.getData();
@@ -59,5 +66,23 @@ public class PuzzleActivity extends Activity {
                 e.printStackTrace();
             }
         }
+    }
+    private Bitmap getImageFromAssetsFile(String fileName)
+    {
+        Bitmap image = null;
+        AssetManager am = getResources().getAssets();
+        try
+        {
+            InputStream is = am.open(fileName);
+            image = BitmapFactory.decodeStream(is);
+            is.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        return image;
+
     }
 }

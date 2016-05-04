@@ -30,7 +30,7 @@ public class SelectPictureActivity extends Activity implements View.OnClickListe
     private Button start;
     private Button level;
     private Button timer;
-    private int bmpId;
+    private String bmpDir;
     private Uri imageUri;
     private int modes;
 
@@ -47,8 +47,8 @@ public class SelectPictureActivity extends Activity implements View.OnClickListe
             case 0:
                 modes=0;
                 int pic_num = itt.getIntExtra("position", 0);
-                bmpId=R.drawable.pic1+pic_num;
-                Picasso.with(this).load(R.drawable.pic1+pic_num).into(iv);
+                bmpDir="puzzle/pic"+(pic_num+1)+".jpg";
+                Picasso.with(this).load("file:///android_asset/puzzle/pic"+(pic_num+1)+".jpg").into(iv);
                 break;
             case 1:
                 modes=1;
@@ -73,7 +73,7 @@ public class SelectPictureActivity extends Activity implements View.OnClickListe
         intent.putExtra("aspectY", 1);// 表示x/y方向上的比例,在此设置为1:2
         intent.putExtra("output", Uri.fromFile(tempFile));
         intent.putExtra("outputFormat", "JPEG");*/
-        File outputImage = new File(Environment.getExternalStorageDirectory(), "output_image.jpg");
+        File outputImage =  new File(Environment.getExternalStorageDirectory().getPath() + "/cpm.jpg");
         try {
             if (outputImage.exists()) {
                 outputImage.delete();
@@ -90,14 +90,15 @@ public class SelectPictureActivity extends Activity implements View.OnClickListe
         intent.putExtra("aspectX", 1);//
         intent.putExtra("aspectY", 1);// 表示x/y方向上的比例,在此设置为1:2
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-        startActivityForResult(intent, 0x3001);
+        intent.putExtra("outputFormat", "JPEG");
+        startActivityForResult(intent, 0x24);
 
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 0x3001 && resultCode == RESULT_OK && null != data) {
+        if (requestCode == 0x24 && resultCode == RESULT_OK && null != data) {
             try{
                 Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
                 iv.setImageBitmap(bitmap);
@@ -128,7 +129,7 @@ public class SelectPictureActivity extends Activity implements View.OnClickListe
                     intent.setData(imageUri);
                 }
                 else if(modes==0){
-                    intent.putExtra("bitmap",bmpId);
+                    intent.putExtra("bitmap",bmpDir);
                 }
                 intent.putExtra("width",width);
                 intent.putExtra("height",height);

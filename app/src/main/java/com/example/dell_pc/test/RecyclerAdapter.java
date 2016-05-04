@@ -1,7 +1,9 @@
 package com.example.dell_pc.test;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +15,10 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -36,7 +42,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         // StaggeredGridLayout
         width = wm.getDefaultDisplay().getWidth() * 98 / 100 / 2;
     }
-
     public OnItemClickListener itemClickListener;
 
     public void setOnItemClickListener(OnItemClickListener itemClickListener) {
@@ -100,7 +105,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         // 建立起ViewHolder中视图与数据的关联
 //        viewHolder.imageView.setImageResource(R.drawable.pic1 + position);
-        Picasso.with(context).load(R.drawable.pic1+position).transform(new MyTransform()).into(viewHolder.imageView);
+//        Picasso.with(context).load(R.drawable.pic1+position).transform(new MyTransform()).into(viewHolder.imageView);
+        /*String str="puzzle/pic"+(position+1)+".jpg";
+        Bitmap bmp= getImageFromAssetsFile(str);
+        bmp=Bitmap.createScaledBitmap(bmp,100,100,true);
+        viewHolder.imageView.setImageBitmap(bmp);*/
+
+
+        Picasso.with(context).load("file:///android_asset/puzzle/pic"+(position+1)+".jpg").transform(new MyTransform()).into(viewHolder.imageView);
     }
 
     @Override

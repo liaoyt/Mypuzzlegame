@@ -68,8 +68,8 @@ public class PieceGroup {
     public void pieceDown(float x,float y){
         int num=tail;
         while(num!=-1){
-            if(x>=pos[num].x-pieceWidth/4&&x<=pos[num].x+pieceWidth+pieceWidth/4&&
-                    y>=pos[num].y-pieceWidth/4&&y<=pos[num].y+pieceWidth+pieceWidth/4&&!fit[num]){
+            if(x>=pos[num].x&&x<=pos[num].x+pieceWidth&&
+                    y>=pos[num].y&&y<=pos[num].y+pieceWidth&&!fit[num]){
                 ismove=true;
                 PointF tmp=new PointF(x,y);
                 org=tmp;
